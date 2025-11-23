@@ -1,15 +1,5 @@
 import sys
-import subprocess
-import pkg_resources
-
-# Verificar si 'requests' está instalado
-required_packages = {'requests'}
-installed_packages = {pkg.key for pkg in pkg_resources.working_set}
-missing_packages = required_packages - installed_packages
-
-if missing_packages:
-    print("\033[31mFaltan paquetes necesarios. Instalando 'requests'...\033[0m")
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', *missing_packages])
+import requests  # Asegúrate de que esto esté aquí para evitar errores
 
 # Comprobar si se proporcionó un nombre de usuario
 if len(sys.argv) != 2:
@@ -24,7 +14,6 @@ RESULTS_FILE = f"{USERNAME}.txt"
 
 # Lista de sitios web para buscar (100 enlaces)
 SITES = [
-    # Redes sociales
     f"https://twitter.com/{USERNAME}",
     f"https://www.instagram.com/{USERNAME}",
     f"https://www.facebook.com/{USERNAME}",
@@ -65,12 +54,10 @@ SITES = [
     f"https://www.vimeo.com/{USERNAME}",
     f"https://www.twitch.tv/{USERNAME}",
     f"https://www.etsy.com/shop/{USERNAME}",
-    f"https://www.craigslist.org/about/sites#US",  # Busca en Craigslist
+    f"https://www.craigslist.org/about/sites#US",
     f"https://www.angieslist.com/companylist/us/{USERNAME}.htm",
     f"https://www.yellowpages.com/search?search_terms={USERNAME}",
     f"https://www.whitepages.com/name/{USERNAME}",
-    
-    # Sitios adicionales
     f"https://www.patreon.com/{USERNAME}",
     f"https://www.twitch.tv/{USERNAME}",
     f"https://www.reverbnation.com/{USERNAME}",
