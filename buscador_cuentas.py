@@ -121,11 +121,11 @@ def buscar_usuario():
         try:
             response = requests.get(site)
             if USERNAME in response.text:
-                print(f"\033[33m¡Encontrado en: {site}!\033[0m")  # Amarillo para encontrado
+                print(f"\033[33m\n[+] ¡Encontrado en: {site}!\033[0m")  # Amarillo para encontrado
                 with open(RESULTS_FILE, 'a') as results_file:
                     results_file.write(f"Encontrado en: {site}\n")  # Guardar en el archivo
             else:
-                print(f"\033[31mNo encontrado en: {site}\033[0m")  # Rojo para no encontrado
+                print(f"\033[31m\n[-] No encontrado en: {site}\033[0m")  # Rojo para no encontrado
         except requests.RequestException as e:
             print(f"\033[31mError al acceder a: {site} - {e}\033[0m")  # Rojo para error
 
