@@ -10,3 +10,6 @@
 # creara un nombre.txt que se gurdara todas las que encontro
 dentro para ver 
 $ cat nombre.txt 
+
+
+![17638706027351847815406088476925](https://github.com/user-attachments/assets/7d252e43-68e6-435a-9979-2d529eae7bf3)
