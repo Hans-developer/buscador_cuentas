@@ -2,6 +2,8 @@ Hans-developer: Herramienta para comprobar nombres de usuario en 100 sitios web
 
 Esta herramienta, desarrollada en python, permite comprobar si un nombre de usuario está disponible en más de 100 sitios web, foros y redes sociales. Es útil para verificar la disponibilidad de un nombre de usuario antes de registrarlo en diferentes plataformas.
 
+Cualquier distro linux incluso Termux
+
 Características
 Comprueba la existencia de un nombre de usuario en más de 100 sitios web, foros y redes sociales.
 Instalación y uso sencillos.
